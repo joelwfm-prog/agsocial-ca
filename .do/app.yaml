@@ -13,7 +13,7 @@ static_sites:
   - name: agsocial-web
     environment_slug: node-js
     github:
-      repo: REPLACE_WITH/agsocial-ca     # set to your new GitHub repo (owner/name)
+      repo: joelwfm-prog/agsocial-ca
       branch: main
       deploy_on_push: true
     build_command: npm run build
