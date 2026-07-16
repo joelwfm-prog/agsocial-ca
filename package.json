@@ -1,0 +1,13 @@
+{
+  "name": "agsocial-ca",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AG Social by Wow Factor Media — static marketing site",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node build.js && npx --yes serve dist -l 8099"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

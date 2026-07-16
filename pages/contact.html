@@ -1,0 +1,97 @@
+<!--meta
+{
+  "slug": "contact",
+  "title": "Contact — Book a Discovery Call | AG Social",
+  "description": "Tell us about your farm or ag business. We'll respond within one business day with thoughts, ideas, and next steps — no pressure, no obligation. Based in Moose Jaw, SK.",
+  "nav": "contact",
+  "ogType": "website",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact AG Social",
+    "url": "https://agsocial.ca/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "AG Social by Wow Factor Media",
+      "email": "hello@agsocial.ca",
+      "telephone": "+1-306-694-1556",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "101 - 53 Stadacona St W",
+        "addressLocality": "Moose Jaw",
+        "addressRegion": "SK",
+        "postalCode": "S6H 1Z2",
+        "addressCountry": "CA"
+      }
+    }
+  }
+}
+meta-->
+
+<!-- ============ CONTACT ============ -->
+<section class="contact-page section">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <div class="kicker">Get in touch</div>
+      <h1>Let's grow your<br/>ag business together.</h1>
+      <p class="lede">Tell us about your farm or business. We'll respond within one business day with thoughts, ideas, and next steps — no pressure, no obligation.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Form -->
+      <form class="cta-form" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formNote').hidden = false;">
+        <div class="row">
+          <label><span>Your name</span><input type="text" name="name" required placeholder="Jane Doe"/></label>
+          <label><span>Email</span><input type="email" name="email" required placeholder="jane@yourfarm.ca"/></label>
+        </div>
+        <div class="row">
+          <label><span>Business / Farm name</span><input type="text" name="business" placeholder="Doe Family Farms"/></label>
+          <label>
+            <span>What kind of ag business?</span>
+            <select name="type">
+              <option>Family farm</option>
+              <option>Ag retail / dealership</option>
+              <option>Crop inputs / seed</option>
+              <option>Livestock / ranch</option>
+              <option>Ag organization or non-profit</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+        <label class="full"><span>Tell us a bit about what you're looking for</span>
+          <textarea name="message" rows="4" placeholder="We're trying to..."></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary btn-lg">Book a Discovery Call →</button>
+        <p id="formNote" class="form-note" hidden>Thanks — we've got your note and will be in touch within one business day.</p>
+      </form>
+
+      <!-- Direct contact -->
+      <aside class="contact-info">
+        <h3>Prefer to reach out directly?</h3>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:hello@agsocial.ca">hello@agsocial.ca</a>
+          </li>
+          <li>
+            <span class="contact-label">Phone</span>
+            <a href="tel:+13066941556">306-694-1556</a>
+          </li>
+          <li>
+            <span class="contact-label">Office</span>
+            <span>101 - 53 Stadacona St W<br/>Moose Jaw, SK S6H 1Z2</span>
+          </li>
+          <li>
+            <span class="contact-label">Serving</span>
+            <span>Saskatchewan, Alberta &amp; Manitoba</span>
+          </li>
+        </ul>
+        <div class="contact-social">
+          <a href="https://www.instagram.com/agsocial.ca/" aria-label="AG Social on Instagram">Instagram</a>
+          <a href="https://www.facebook.com/agsocial.ca/" aria-label="AG Social on Facebook">Facebook</a>
+          <a href="https://www.linkedin.com/company/ag-social/" aria-label="AG Social on LinkedIn">LinkedIn</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

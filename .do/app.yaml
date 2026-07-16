@@ -1,0 +1,46 @@
+# DigitalOcean App Platform spec — AG Social static site
+# Deploy: doctl apps create --spec .do/app.yaml   (first time)
+#         doctl apps update <APP_ID> --spec .do/app.yaml   (updates)
+#
+# Notes:
+# - Static site, free tier (Starter). No runtime — serves dist/ built by `npm run build`.
+# - Redirects for legacy Squarespace paths are handled below in ingress.rules
+#   (and mirrored in dist/_redirects as a fallback).
+name: agsocial
+region: tor   # Toronto — closest region to Saskatchewan
+
+static_sites:
+  - name: agsocial-web
+    environment_slug: node-js
+    github:
+      repo: REPLACE_WITH/agsocial-ca     # set to your new GitHub repo (owner/name)
+      branch: main
+      deploy_on_push: true
+    build_command: npm run build
+    output_dir: dist
+    index_document: index.html
+    error_document: 404.html
+    catchall_document: 404.html
+
+ingress:
+  rules:
+    # Legacy privacy policy → new slug
+    - match:
+        path:
+          prefix: /privacypolicy
+      redirect:
+        uri: /privacy-policy
+        redirect_code: 301
+    # Legacy careers path → new slug
+    - match:
+        path:
+          prefix: /job-opportunities
+      redirect:
+        uri: /careers
+        redirect_code: 301
+    # Everything else serves from the static site
+    - match:
+        path:
+          prefix: /
+      component:
+        name: agsocial-web
