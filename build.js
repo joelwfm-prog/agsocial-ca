@@ -36,7 +36,7 @@ const PAGES = path.join(ROOT, "pages");
 const DIST = path.join(ROOT, "dist");
 const STATIC = path.join(ROOT, "static"); // sitemap, robots, redirects, 404 source
 
-const SITE = "https://agsocial.ca";
+const SITE = "https://www.agsocial.ca";
 const YEAR = new Date().getFullYear();
 
 function read(p) {
